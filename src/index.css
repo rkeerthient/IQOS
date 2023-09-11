@@ -94,3 +94,17 @@
 .slick-slider .slick-slide {
   padding: 0 15px;
 }
+
+.chatButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.yext-chat-panel__messages-container {
+  height: 400px;
+  @apply !overflow-scroll;
+}
