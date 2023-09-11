@@ -167,20 +167,15 @@ const Product: Template<TemplateRenderProps> = ({
               {/* Product info */}
               <div className="col-10 offset-1 col-md-8 offset-md-2 col-lg-6 offset-lg-0 p-0 mt-4 mt-lg-0 leading-6">
                 <div className="mw-100  mx-8 mb-3 p-6 px-5  ">
-                  <h3 className="text-5xl font-medium">
-                    HEETS AMBER BUNDLE (10)
-                  </h3>
+                  <h3 className="text-5xl font-medium">{name}</h3>
                   <div className="my-7 py-2">
-                    <span className="text-sm ">
-                      Rounded, toasted tobacco blend with light woody and nutty
-                      aroma notes
-                    </span>
+                    <span className="text-sm ">{c_shortDescription}</span>
                   </div>
                   <div className="mb-7 py-2">
                     <div className="d-flex align-items-end mb-1 mb-lg-0">
                       <div className="pe-2 me-1">
                         <span className="text-2xl" data-pmi-el="price">
-                          £60.00
+                          £{price.value}
                         </span>
                       </div>
                       <div className="pe-3"></div>
@@ -343,12 +338,7 @@ const Product: Template<TemplateRenderProps> = ({
                     </div>
                   </div>
                   <div className="product__info-text-wrapper my-7 py-6">
-                    <span>
-                      Rounded, toasted tobacco blend with light woody and nutty
-                      aroma notes. Each pack of HEETS Amber contains 20 HEETS.
-                      This box contains 10 packs (200 HEETS). Individual packs
-                      cost £6 and are not sold separately online.
-                    </span>
+                    <span>{c_richTextDescription}</span>
                   </div>
                 </div>
               </div>
