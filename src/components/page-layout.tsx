@@ -6,16 +6,18 @@ import { IoChatbubblesSharp, IoCaretDownOutline } from "react-icons/io5";
 import {
   ChatHeadlessProvider,
   HeadlessConfig,
+  useChatActions,
 } from "@yext/chat-headless-react";
 import "@yext/chat-ui-react/bundle.css";
 import { ChatHeader, ChatPanel } from "@yext/chat-ui-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Chat from "./Chat";
 type Props = {
   _site?: Site;
   children?: React.ReactNode;
 };
 const config: HeadlessConfig = {
-  botId: "pmi-chat-assistant",
+  botId: "pmi-chat-assistant_copy",
   apiKey: "2231e2d10f42dc48679cff41b254ee7f",
 };
 const PageLayout = ({ _site, children }: Props) => {
@@ -28,20 +30,11 @@ const PageLayout = ({ _site, children }: Props) => {
       <Footer _site={_site}></Footer>
       {showChat && (
         <div
-          className="w-1/4 h-[600] mb-8"
+          className="w-1/5 h-[600] mb-8"
           style={{ bottom: "20px", right: "20px", position: "fixed" }}
         >
           <ChatHeadlessProvider config={config}>
-            <ChatPanel
-              header={
-                <ChatHeader
-                  title="PMI Bot"
-                  showRestartButton={true}
-                  customCssClasses={{ container: "!bg-none !bg-[#f5a91b]" }}
-                />
-              }
-              customCssClasses={{ container: "h-[600] overflow-scroll" }}
-            />
+            <Chat></Chat>
           </ChatHeadlessProvider>
         </div>
       )}

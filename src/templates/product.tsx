@@ -169,7 +169,9 @@ const Product: Template<TemplateRenderProps> = ({
                 <div className="mw-100  mx-8 mb-3 p-6 px-5  ">
                   <h3 className="text-5xl font-medium">{name}</h3>
                   <div className="my-7 py-2">
-                    <span className="text-sm ">{c_shortDescription}</span>
+                    {c_shortDescription && (
+                      <span className="text-sm ">{c_shortDescription}</span>
+                    )}{" "}
                   </div>
                   <div className="mb-7 py-2">
                     <div className="d-flex align-items-end mb-1 mb-lg-0">
@@ -361,7 +363,7 @@ const Product: Template<TemplateRenderProps> = ({
                         />
                       </Disclosure.Button>
                       <Disclosure.Panel className="px-4 pt-4 pb-2  ">
-                        <RTF>{c_delivery}</RTF>
+                        {c_delivery && <RTF>{c_delivery}</RTF>}
                       </Disclosure.Panel>
                     </>
                   )}
@@ -379,7 +381,7 @@ const Product: Template<TemplateRenderProps> = ({
                         />
                       </Disclosure.Button>
                       <Disclosure.Panel className="px-4 pt-4 pb-2  ">
-                        <RTF>{c_returns}</RTF>
+                        {c_returns && <RTF>{c_returns}</RTF>}{" "}
                       </Disclosure.Panel>
                     </>
                   )}
