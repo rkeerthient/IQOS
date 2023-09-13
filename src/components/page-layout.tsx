@@ -15,7 +15,7 @@ type Props = {
   children?: React.ReactNode;
 };
 const config: HeadlessConfig = {
-  botId: "pmi-chat-assistant",
+  botId: "pmi-chat-assistant-copy-v1",
   apiKey: "2231e2d10f42dc48679cff41b254ee7f",
 };
 const PageLayout = ({ _site, children }: Props) => {
