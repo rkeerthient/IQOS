@@ -61,6 +61,7 @@ function ChatComponent() {
     [
       "what flavour is it?",
       "what is this flavour?",
+      "what flavour is this?",
       "what is its flavour?",
       "whats the price of it?",
       "what is its price?",
