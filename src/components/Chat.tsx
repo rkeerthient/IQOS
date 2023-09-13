@@ -6,7 +6,6 @@ import {
 import * as React from "react";
 import { useEffect, useState } from "react";
 import RTF from "./RTF";
-import { ChatPanel } from "@yext/chat-ui-react";
 import { FaSync } from "react-icons/fa";
 import { BiUpArrowAlt } from "react-icons/bi";
 import { useRef } from "react";
@@ -60,8 +59,20 @@ function ChatComponent() {
 
   const onClick = React.useCallback(async () => {
     console.log("entered");
+    console.log(
+      [
+        "what flavour is it",
+        "what is its flavour",
+        "whats the price of it",
+        "what is its price",
+      ].includes(input.trim().toLowerCase())
+    );
 
     [
+      "what flavour is it?",
+      "what is its flavour?",
+      "whats the price of it?",
+      "what is its price?",
       "what flavour is it",
       "what is its flavour",
       "whats the price of it",
@@ -70,6 +81,8 @@ function ChatComponent() {
       actions.setContext({
         productId: "1014174169",
       });
+    console.log(JSON.stringify(actions));
+
     actions.getNextMessage(input).catch((e) => handleError(e));
     setInput("");
   }, [actions, handleError, input]);

@@ -6,18 +6,16 @@ import { IoChatbubblesSharp, IoCaretDownOutline } from "react-icons/io5";
 import {
   ChatHeadlessProvider,
   HeadlessConfig,
-  useChatActions,
 } from "@yext/chat-headless-react";
 import "@yext/chat-ui-react/bundle.css";
-import { ChatHeader, ChatPanel } from "@yext/chat-ui-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Chat from "./Chat";
 type Props = {
   _site?: Site;
   children?: React.ReactNode;
 };
 const config: HeadlessConfig = {
-  botId: "pmi-chat-assistant_copy",
+  botId: "pmi-chat-assistant",
   apiKey: "2231e2d10f42dc48679cff41b254ee7f",
 };
 const PageLayout = ({ _site, children }: Props) => {
