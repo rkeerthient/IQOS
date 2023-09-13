@@ -58,16 +58,6 @@ function ChatComponent() {
   }, [messages, actions, input, handleError]);
 
   const onClick = React.useCallback(async () => {
-    console.log("entered");
-    console.log(
-      [
-        "what flavour is it",
-        "what is its flavour",
-        "whats the price of it",
-        "what is its price",
-      ].includes(input.trim().toLowerCase())
-    );
-
     [
       "what flavour is it?",
       "what is this flavour?",
