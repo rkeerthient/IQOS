@@ -28,7 +28,7 @@ const PageLayout = ({ _site, children }: Props) => {
       <Footer _site={_site}></Footer>
       {showChat && (
         <div
-          className="w-1/5 h-[600] mb-8"
+          className="w-[400px] h-[600] mb-8"
           style={{ bottom: "20px", right: "20px", position: "fixed" }}
         >
           <ChatHeadlessProvider config={config}>

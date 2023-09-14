@@ -114,8 +114,8 @@ function ChatComponent() {
             <div
               className={`${
                 m.source === "BOT"
-                  ? `relative group peer w-fit max-w-[80%] rounded-2xl p-4 yext-chat-message-bubble__bubble bg-gradient-to-tr from-slate-50 to-slate-100 yext-chat-message-bubble__bubble__bot`
-                  : `relative group peer w-fit max-w-[80%] rounded-2xl p-4 yext-chat-message-bubble__bubble ml-auto @lg:ml-0 bg-gradient-to-tr from-blue-600 to-blue-700 text-white yext-chat-message-bubble__bubble__user`
+                  ? ` my-2 relative group peer w-fit max-w-[80%] rounded-2xl p-4 yext-chat-message-bubble__bubble bg-gradient-to-tr from-slate-50 to-slate-100 yext-chat-message-bubble__bubble__bot`
+                  : ` my-4 relative group peer w-fit max-w-[80%] rounded-2xl p-4 yext-chat-message-bubble__bubble ml-auto @lg:ml-0 bg-gradient-to-tr from-blue-600 to-blue-700 text-white yext-chat-message-bubble__bubble__user`
               }`}
             >
               <div
